@@ -1,5 +1,3 @@
-package com.vach.sample;
-
 import com.google.protobuf.BoolValue;
 import com.vach.common.proto.ProtoCommon;
 import org.junit.Test;
