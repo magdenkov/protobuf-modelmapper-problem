@@ -13,6 +13,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
+import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
 @RunWith(Parameterized.class)
@@ -42,7 +43,9 @@ public class MoreComplicatedCase {
 
         ProtoCommon.AddPropertyRequest builder = modelMapper.map(property, ProtoCommon.AddPropertyRequest.Builder.class).build();
 
-        assertTrue(builder.getPropertyDetails().getUtilities().getWater());
+        System.out.println(builder.getPropertyDetails().getUtilities().getWater());
+        assertNotNull(builder.getPropertyDetails().getUtilities().getWater());
+        assertTrue(builder.getPropertyDetails().getUtilities().getWater());  // some times is is false!!!
     }
 
 
