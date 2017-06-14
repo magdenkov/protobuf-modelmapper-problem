@@ -1,5 +1,6 @@
 import com.google.protobuf.BoolValue;
 import com.vach.common.proto.ProtoCommon;
+import com.vach.sample.ModelMapperFactory;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -26,7 +27,7 @@ public class MoreComplicatedCase {
 
     @Test
     public void mappingTest() {
-        ModelMapper modelMapper = getModelMapper();
+        ModelMapper modelMapper = ModelMapperFactory.getConfiguredModelMapper();
         ProtoCommon.Property property = ProtoCommon.Property.newBuilder()
                 .setPropertyId("propertyId")
                 .setPropertyDetails(ProtoCommon.PropertyDetails.newBuilder()
@@ -47,35 +48,4 @@ public class MoreComplicatedCase {
         assertNotNull(builder.getPropertyDetails().getUtilities().getWater());
         assertTrue(builder.getPropertyDetails().getUtilities().getWater());  // some times is is false!!!
     }
-
-
-    private ModelMapper getModelMapper() {
-        ModelMapper modelMapper = new ModelMapper();
-        modelMapper.getConfiguration().setFieldMatchingEnabled(true);
-        modelMapper.getConfiguration().setPropertyCondition(Conditions.isNotNull());
-        modelMapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
-        modelMapper.addConverter(GRPC_BOOL_WRAPPER_TO_BOOLEAN);
-        modelMapper.addConverter(BOOLEAN_TO_GRPC_WRAPPER_BOOL);
-        return modelMapper;
-    }
-
-    private final Converter GRPC_BOOL_WRAPPER_TO_BOOLEAN = new Converter<BoolValue, Boolean>() {
-        @Override
-        public Boolean convert(MappingContext<BoolValue, Boolean> context) {
-            System.out.println("Converter GRPC_BOOL_WRAPPER_TO_BOOLEAN executed ");
-            return Optional.ofNullable(context.getSource())
-                    .map(BoolValue::getValue)
-                    .orElse(null);
-        }
-    };
-
-    private final Converter BOOLEAN_TO_GRPC_WRAPPER_BOOL = new Converter<Boolean, BoolValue>() {
-        @Override
-        public BoolValue convert(MappingContext<Boolean, BoolValue> context) {
-            System.out.println("Converter BOOLEAN_TO_GRPC_WRAPPER_BOOL executed ");
-            return Optional.ofNullable(context.getSource())
-                    .map(v -> BoolValue.newBuilder().setValue(v).build())
-                    .orElse(null);
-        }
-    };
 }
