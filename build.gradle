@@ -1,0 +1,95 @@
+group 'com.vach.sample'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'com.google.protobuf'
+
+sourceCompatibility = 1.8
+
+buildscript {
+    ext.protobuf_version = '3.+'
+
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+
+        classpath 'com.google.protobuf:protobuf-gradle-plugin:0.8.1'
+    }
+}
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+sourceSets {
+    main {
+        java {
+            srcDir 'gen/main/java'
+        }
+    }
+    test {
+        java {
+            srcDir 'gen/test/java'
+        }
+    }
+}
+
+protobuf {
+    generatedFilesBaseDir = "$projectDir/gen"
+
+//            plugins {
+//               grpc {
+//                  artifact = 'io.grpc:protoc-gen-grpc-java:0.13.2'
+//               }
+//            }
+
+    protoc {
+        artifact = "com.google.protobuf:protoc:$protobuf_version"
+    }
+
+    generateProtoTasks {
+        all().each { task ->
+
+            // help gradle to understand when protobuf is generated
+            if (task.name == "generateProto") {
+                task.outputs.upToDateWhen {
+                    new File(generatedFilesBaseDir).exists()
+                }
+            }
+        }
+
+        // task to clean generated code
+        task deleteGeneratedProto << { delete generatedFilesBaseDir }
+
+        // task to recompile proto
+        task recompileProto {}
+        recompileProto.dependsOn(deleteGeneratedProto)
+        recompileProto.dependsOn(generateProto)
+
+        // make sure that java compilation will happen after proto is there
+        compileJava.dependsOn(generateProto)
+
+        // make sure that clean task also removes generated code
+        clean.dependsOn(deleteGeneratedProto)
+    }
+
+}
+
+dependencies {
+    compile "com.google.protobuf:protobuf-java:$protobuf_version"
+
+//    api 'org.apache.commons:commons-math3:3.6.1'
+
+    // This dependency is used internally, and not exposed to consumers on their own compile classpath.
+//    implementation 'com.google.guava:guava:21.0'
+
+    // Use JUnit test framework
+
+
+    compile group: 'org.modelmapper', name: 'modelmapper', version: '1.0.0'
+    compile group: 'com.google.protobuf', name: 'protobuf-java', version: '3.3.1'
+    testCompile 'junit:junit:4.12'
+
+}

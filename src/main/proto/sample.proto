@@ -1,0 +1,10 @@
+syntax = "proto3";
+import "google/protobuf/wrappers.proto";
+
+option java_outer_classname = "ProtoCommon";
+
+package com.vach.common.proto;
+
+message TestBoolValue {
+    google.protobuf.BoolValue someBoolValue = 1;
+}
