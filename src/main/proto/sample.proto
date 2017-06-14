@@ -8,3 +8,33 @@ package com.vach.common.proto;
 message TestBoolValue {
     google.protobuf.BoolValue someBoolValue = 1;
 }
+
+message PropertyDetails {
+    string address = 1;
+    string city = 2;
+    string state = 3;
+    string zip = 4;
+    Utilities utilities = 5;
+
+    message Utilities {
+        bool electric = 1;
+        bool gas = 2;
+        bool water = 3;
+        bool sewer = 4;
+        bool trash = 5;
+        bool internet = 6;
+        bool cable = 7;
+    }
+}
+
+message Property {
+    string propertyId = 1;
+    PropertyDetails propertyDetails = 2;
+    string updatedAt = 3;
+    string createdAt = 4;
+}
+
+message AddPropertyRequest {
+    string propertyId = 1;
+    PropertyDetails propertyDetails = 2;
+}

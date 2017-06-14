@@ -585,11 +585,3665 @@ public final class ProtoCommon {
 
   }
 
+  public interface PropertyDetailsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.vach.common.proto.PropertyDetails)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string address = 1;</code>
+     */
+    java.lang.String getAddress();
+    /**
+     * <code>string address = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getAddressBytes();
+
+    /**
+     * <code>string city = 2;</code>
+     */
+    java.lang.String getCity();
+    /**
+     * <code>string city = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getCityBytes();
+
+    /**
+     * <code>string state = 3;</code>
+     */
+    java.lang.String getState();
+    /**
+     * <code>string state = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getStateBytes();
+
+    /**
+     * <code>string zip = 4;</code>
+     */
+    java.lang.String getZip();
+    /**
+     * <code>string zip = 4;</code>
+     */
+    com.google.protobuf.ByteString
+        getZipBytes();
+
+    /**
+     * <code>.com.vach.common.proto.PropertyDetails.Utilities utilities = 5;</code>
+     */
+    boolean hasUtilities();
+    /**
+     * <code>.com.vach.common.proto.PropertyDetails.Utilities utilities = 5;</code>
+     */
+    com.vach.common.proto.ProtoCommon.PropertyDetails.Utilities getUtilities();
+    /**
+     * <code>.com.vach.common.proto.PropertyDetails.Utilities utilities = 5;</code>
+     */
+    com.vach.common.proto.ProtoCommon.PropertyDetails.UtilitiesOrBuilder getUtilitiesOrBuilder();
+  }
+  /**
+   * Protobuf type {@code com.vach.common.proto.PropertyDetails}
+   */
+  public  static final class PropertyDetails extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:com.vach.common.proto.PropertyDetails)
+      PropertyDetailsOrBuilder {
+    // Use PropertyDetails.newBuilder() to construct.
+    private PropertyDetails(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PropertyDetails() {
+      address_ = "";
+      city_ = "";
+      state_ = "";
+      zip_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+    }
+    private PropertyDetails(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!input.skipField(tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              address_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              city_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              state_ = s;
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              zip_ = s;
+              break;
+            }
+            case 42: {
+              com.vach.common.proto.ProtoCommon.PropertyDetails.Utilities.Builder subBuilder = null;
+              if (utilities_ != null) {
+                subBuilder = utilities_.toBuilder();
+              }
+              utilities_ = input.readMessage(com.vach.common.proto.ProtoCommon.PropertyDetails.Utilities.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(utilities_);
+                utilities_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.vach.common.proto.ProtoCommon.internal_static_com_vach_common_proto_PropertyDetails_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.vach.common.proto.ProtoCommon.internal_static_com_vach_common_proto_PropertyDetails_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.vach.common.proto.ProtoCommon.PropertyDetails.class, com.vach.common.proto.ProtoCommon.PropertyDetails.Builder.class);
+    }
+
+    public interface UtilitiesOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:com.vach.common.proto.PropertyDetails.Utilities)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>bool electric = 1;</code>
+       */
+      boolean getElectric();
+
+      /**
+       * <code>bool gas = 2;</code>
+       */
+      boolean getGas();
+
+      /**
+       * <code>bool water = 3;</code>
+       */
+      boolean getWater();
+
+      /**
+       * <code>bool sewer = 4;</code>
+       */
+      boolean getSewer();
+
+      /**
+       * <code>bool trash = 5;</code>
+       */
+      boolean getTrash();
+
+      /**
+       * <code>bool internet = 6;</code>
+       */
+      boolean getInternet();
+
+      /**
+       * <code>bool cable = 7;</code>
+       */
+      boolean getCable();
+    }
+    /**
+     * Protobuf type {@code com.vach.common.proto.PropertyDetails.Utilities}
+     */
+    public  static final class Utilities extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:com.vach.common.proto.PropertyDetails.Utilities)
+        UtilitiesOrBuilder {
+      // Use Utilities.newBuilder() to construct.
+      private Utilities(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Utilities() {
+        electric_ = false;
+        gas_ = false;
+        water_ = false;
+        sewer_ = false;
+        trash_ = false;
+        internet_ = false;
+        cable_ = false;
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      }
+      private Utilities(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        int mutable_bitField0_ = 0;
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!input.skipField(tag)) {
+                  done = true;
+                }
+                break;
+              }
+              case 8: {
+
+                electric_ = input.readBool();
+                break;
+              }
+              case 16: {
+
+                gas_ = input.readBool();
+                break;
+              }
+              case 24: {
+
+                water_ = input.readBool();
+                break;
+              }
+              case 32: {
+
+                sewer_ = input.readBool();
+                break;
+              }
+              case 40: {
+
+                trash_ = input.readBool();
+                break;
+              }
+              case 48: {
+
+                internet_ = input.readBool();
+                break;
+              }
+              case 56: {
+
+                cable_ = input.readBool();
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.vach.common.proto.ProtoCommon.internal_static_com_vach_common_proto_PropertyDetails_Utilities_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.vach.common.proto.ProtoCommon.internal_static_com_vach_common_proto_PropertyDetails_Utilities_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.vach.common.proto.ProtoCommon.PropertyDetails.Utilities.class, com.vach.common.proto.ProtoCommon.PropertyDetails.Utilities.Builder.class);
+      }
+
+      public static final int ELECTRIC_FIELD_NUMBER = 1;
+      private boolean electric_;
+      /**
+       * <code>bool electric = 1;</code>
+       */
+      public boolean getElectric() {
+        return electric_;
+      }
+
+      public static final int GAS_FIELD_NUMBER = 2;
+      private boolean gas_;
+      /**
+       * <code>bool gas = 2;</code>
+       */
+      public boolean getGas() {
+        return gas_;
+      }
+
+      public static final int WATER_FIELD_NUMBER = 3;
+      private boolean water_;
+      /**
+       * <code>bool water = 3;</code>
+       */
+      public boolean getWater() {
+        return water_;
+      }
+
+      public static final int SEWER_FIELD_NUMBER = 4;
+      private boolean sewer_;
+      /**
+       * <code>bool sewer = 4;</code>
+       */
+      public boolean getSewer() {
+        return sewer_;
+      }
+
+      public static final int TRASH_FIELD_NUMBER = 5;
+      private boolean trash_;
+      /**
+       * <code>bool trash = 5;</code>
+       */
+      public boolean getTrash() {
+        return trash_;
+      }
+
+      public static final int INTERNET_FIELD_NUMBER = 6;
+      private boolean internet_;
+      /**
+       * <code>bool internet = 6;</code>
+       */
+      public boolean getInternet() {
+        return internet_;
+      }
+
+      public static final int CABLE_FIELD_NUMBER = 7;
+      private boolean cable_;
+      /**
+       * <code>bool cable = 7;</code>
+       */
+      public boolean getCable() {
+        return cable_;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (electric_ != false) {
+          output.writeBool(1, electric_);
+        }
+        if (gas_ != false) {
+          output.writeBool(2, gas_);
+        }
+        if (water_ != false) {
+          output.writeBool(3, water_);
+        }
+        if (sewer_ != false) {
+          output.writeBool(4, sewer_);
+        }
+        if (trash_ != false) {
+          output.writeBool(5, trash_);
+        }
+        if (internet_ != false) {
+          output.writeBool(6, internet_);
+        }
+        if (cable_ != false) {
+          output.writeBool(7, cable_);
+        }
+      }
+
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (electric_ != false) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBoolSize(1, electric_);
+        }
+        if (gas_ != false) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBoolSize(2, gas_);
+        }
+        if (water_ != false) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBoolSize(3, water_);
+        }
+        if (sewer_ != false) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBoolSize(4, sewer_);
+        }
+        if (trash_ != false) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBoolSize(5, trash_);
+        }
+        if (internet_ != false) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBoolSize(6, internet_);
+        }
+        if (cable_ != false) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBoolSize(7, cable_);
+        }
+        memoizedSize = size;
+        return size;
+      }
+
+      private static final long serialVersionUID = 0L;
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof com.vach.common.proto.ProtoCommon.PropertyDetails.Utilities)) {
+          return super.equals(obj);
+        }
+        com.vach.common.proto.ProtoCommon.PropertyDetails.Utilities other = (com.vach.common.proto.ProtoCommon.PropertyDetails.Utilities) obj;
+
+        boolean result = true;
+        result = result && (getElectric()
+            == other.getElectric());
+        result = result && (getGas()
+            == other.getGas());
+        result = result && (getWater()
+            == other.getWater());
+        result = result && (getSewer()
+            == other.getSewer());
+        result = result && (getTrash()
+            == other.getTrash());
+        result = result && (getInternet()
+            == other.getInternet());
+        result = result && (getCable()
+            == other.getCable());
+        return result;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + ELECTRIC_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getElectric());
+        hash = (37 * hash) + GAS_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getGas());
+        hash = (37 * hash) + WATER_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getWater());
+        hash = (37 * hash) + SEWER_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getSewer());
+        hash = (37 * hash) + TRASH_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getTrash());
+        hash = (37 * hash) + INTERNET_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getInternet());
+        hash = (37 * hash) + CABLE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getCable());
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static com.vach.common.proto.ProtoCommon.PropertyDetails.Utilities parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.vach.common.proto.ProtoCommon.PropertyDetails.Utilities parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.vach.common.proto.ProtoCommon.PropertyDetails.Utilities parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.vach.common.proto.ProtoCommon.PropertyDetails.Utilities parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.vach.common.proto.ProtoCommon.PropertyDetails.Utilities parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.vach.common.proto.ProtoCommon.PropertyDetails.Utilities parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.vach.common.proto.ProtoCommon.PropertyDetails.Utilities parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.vach.common.proto.ProtoCommon.PropertyDetails.Utilities parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.vach.common.proto.ProtoCommon.PropertyDetails.Utilities parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static com.vach.common.proto.ProtoCommon.PropertyDetails.Utilities parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.vach.common.proto.ProtoCommon.PropertyDetails.Utilities parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.vach.common.proto.ProtoCommon.PropertyDetails.Utilities parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.vach.common.proto.ProtoCommon.PropertyDetails.Utilities prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code com.vach.common.proto.PropertyDetails.Utilities}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:com.vach.common.proto.PropertyDetails.Utilities)
+          com.vach.common.proto.ProtoCommon.PropertyDetails.UtilitiesOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.vach.common.proto.ProtoCommon.internal_static_com_vach_common_proto_PropertyDetails_Utilities_descriptor;
+        }
+
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.vach.common.proto.ProtoCommon.internal_static_com_vach_common_proto_PropertyDetails_Utilities_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.vach.common.proto.ProtoCommon.PropertyDetails.Utilities.class, com.vach.common.proto.ProtoCommon.PropertyDetails.Utilities.Builder.class);
+        }
+
+        // Construct using com.vach.common.proto.ProtoCommon.PropertyDetails.Utilities.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        public Builder clear() {
+          super.clear();
+          electric_ = false;
+
+          gas_ = false;
+
+          water_ = false;
+
+          sewer_ = false;
+
+          trash_ = false;
+
+          internet_ = false;
+
+          cable_ = false;
+
+          return this;
+        }
+
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.vach.common.proto.ProtoCommon.internal_static_com_vach_common_proto_PropertyDetails_Utilities_descriptor;
+        }
+
+        public com.vach.common.proto.ProtoCommon.PropertyDetails.Utilities getDefaultInstanceForType() {
+          return com.vach.common.proto.ProtoCommon.PropertyDetails.Utilities.getDefaultInstance();
+        }
+
+        public com.vach.common.proto.ProtoCommon.PropertyDetails.Utilities build() {
+          com.vach.common.proto.ProtoCommon.PropertyDetails.Utilities result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        public com.vach.common.proto.ProtoCommon.PropertyDetails.Utilities buildPartial() {
+          com.vach.common.proto.ProtoCommon.PropertyDetails.Utilities result = new com.vach.common.proto.ProtoCommon.PropertyDetails.Utilities(this);
+          result.electric_ = electric_;
+          result.gas_ = gas_;
+          result.water_ = water_;
+          result.sewer_ = sewer_;
+          result.trash_ = trash_;
+          result.internet_ = internet_;
+          result.cable_ = cable_;
+          onBuilt();
+          return result;
+        }
+
+        public Builder clone() {
+          return (Builder) super.clone();
+        }
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            Object value) {
+          return (Builder) super.setField(field, value);
+        }
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return (Builder) super.clearField(field);
+        }
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return (Builder) super.clearOneof(oneof);
+        }
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, Object value) {
+          return (Builder) super.setRepeatedField(field, index, value);
+        }
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            Object value) {
+          return (Builder) super.addRepeatedField(field, value);
+        }
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.vach.common.proto.ProtoCommon.PropertyDetails.Utilities) {
+            return mergeFrom((com.vach.common.proto.ProtoCommon.PropertyDetails.Utilities)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.vach.common.proto.ProtoCommon.PropertyDetails.Utilities other) {
+          if (other == com.vach.common.proto.ProtoCommon.PropertyDetails.Utilities.getDefaultInstance()) return this;
+          if (other.getElectric() != false) {
+            setElectric(other.getElectric());
+          }
+          if (other.getGas() != false) {
+            setGas(other.getGas());
+          }
+          if (other.getWater() != false) {
+            setWater(other.getWater());
+          }
+          if (other.getSewer() != false) {
+            setSewer(other.getSewer());
+          }
+          if (other.getTrash() != false) {
+            setTrash(other.getTrash());
+          }
+          if (other.getInternet() != false) {
+            setInternet(other.getInternet());
+          }
+          if (other.getCable() != false) {
+            setCable(other.getCable());
+          }
+          onChanged();
+          return this;
+        }
+
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          com.vach.common.proto.ProtoCommon.PropertyDetails.Utilities parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (com.vach.common.proto.ProtoCommon.PropertyDetails.Utilities) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private boolean electric_ ;
+        /**
+         * <code>bool electric = 1;</code>
+         */
+        public boolean getElectric() {
+          return electric_;
+        }
+        /**
+         * <code>bool electric = 1;</code>
+         */
+        public Builder setElectric(boolean value) {
+          
+          electric_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>bool electric = 1;</code>
+         */
+        public Builder clearElectric() {
+          
+          electric_ = false;
+          onChanged();
+          return this;
+        }
+
+        private boolean gas_ ;
+        /**
+         * <code>bool gas = 2;</code>
+         */
+        public boolean getGas() {
+          return gas_;
+        }
+        /**
+         * <code>bool gas = 2;</code>
+         */
+        public Builder setGas(boolean value) {
+          
+          gas_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>bool gas = 2;</code>
+         */
+        public Builder clearGas() {
+          
+          gas_ = false;
+          onChanged();
+          return this;
+        }
+
+        private boolean water_ ;
+        /**
+         * <code>bool water = 3;</code>
+         */
+        public boolean getWater() {
+          return water_;
+        }
+        /**
+         * <code>bool water = 3;</code>
+         */
+        public Builder setWater(boolean value) {
+          
+          water_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>bool water = 3;</code>
+         */
+        public Builder clearWater() {
+          
+          water_ = false;
+          onChanged();
+          return this;
+        }
+
+        private boolean sewer_ ;
+        /**
+         * <code>bool sewer = 4;</code>
+         */
+        public boolean getSewer() {
+          return sewer_;
+        }
+        /**
+         * <code>bool sewer = 4;</code>
+         */
+        public Builder setSewer(boolean value) {
+          
+          sewer_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>bool sewer = 4;</code>
+         */
+        public Builder clearSewer() {
+          
+          sewer_ = false;
+          onChanged();
+          return this;
+        }
+
+        private boolean trash_ ;
+        /**
+         * <code>bool trash = 5;</code>
+         */
+        public boolean getTrash() {
+          return trash_;
+        }
+        /**
+         * <code>bool trash = 5;</code>
+         */
+        public Builder setTrash(boolean value) {
+          
+          trash_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>bool trash = 5;</code>
+         */
+        public Builder clearTrash() {
+          
+          trash_ = false;
+          onChanged();
+          return this;
+        }
+
+        private boolean internet_ ;
+        /**
+         * <code>bool internet = 6;</code>
+         */
+        public boolean getInternet() {
+          return internet_;
+        }
+        /**
+         * <code>bool internet = 6;</code>
+         */
+        public Builder setInternet(boolean value) {
+          
+          internet_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>bool internet = 6;</code>
+         */
+        public Builder clearInternet() {
+          
+          internet_ = false;
+          onChanged();
+          return this;
+        }
+
+        private boolean cable_ ;
+        /**
+         * <code>bool cable = 7;</code>
+         */
+        public boolean getCable() {
+          return cable_;
+        }
+        /**
+         * <code>bool cable = 7;</code>
+         */
+        public Builder setCable(boolean value) {
+          
+          cable_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>bool cable = 7;</code>
+         */
+        public Builder clearCable() {
+          
+          cable_ = false;
+          onChanged();
+          return this;
+        }
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return this;
+        }
+
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return this;
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:com.vach.common.proto.PropertyDetails.Utilities)
+      }
+
+      // @@protoc_insertion_point(class_scope:com.vach.common.proto.PropertyDetails.Utilities)
+      private static final com.vach.common.proto.ProtoCommon.PropertyDetails.Utilities DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.vach.common.proto.ProtoCommon.PropertyDetails.Utilities();
+      }
+
+      public static com.vach.common.proto.ProtoCommon.PropertyDetails.Utilities getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<Utilities>
+          PARSER = new com.google.protobuf.AbstractParser<Utilities>() {
+        public Utilities parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+            return new Utilities(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<Utilities> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Utilities> getParserForType() {
+        return PARSER;
+      }
+
+      public com.vach.common.proto.ProtoCommon.PropertyDetails.Utilities getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public static final int ADDRESS_FIELD_NUMBER = 1;
+    private volatile java.lang.Object address_;
+    /**
+     * <code>string address = 1;</code>
+     */
+    public java.lang.String getAddress() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        address_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string address = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getAddressBytes() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        address_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CITY_FIELD_NUMBER = 2;
+    private volatile java.lang.Object city_;
+    /**
+     * <code>string city = 2;</code>
+     */
+    public java.lang.String getCity() {
+      java.lang.Object ref = city_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        city_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string city = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getCityBytes() {
+      java.lang.Object ref = city_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        city_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int STATE_FIELD_NUMBER = 3;
+    private volatile java.lang.Object state_;
+    /**
+     * <code>string state = 3;</code>
+     */
+    public java.lang.String getState() {
+      java.lang.Object ref = state_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        state_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string state = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getStateBytes() {
+      java.lang.Object ref = state_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        state_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ZIP_FIELD_NUMBER = 4;
+    private volatile java.lang.Object zip_;
+    /**
+     * <code>string zip = 4;</code>
+     */
+    public java.lang.String getZip() {
+      java.lang.Object ref = zip_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        zip_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string zip = 4;</code>
+     */
+    public com.google.protobuf.ByteString
+        getZipBytes() {
+      java.lang.Object ref = zip_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        zip_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int UTILITIES_FIELD_NUMBER = 5;
+    private com.vach.common.proto.ProtoCommon.PropertyDetails.Utilities utilities_;
+    /**
+     * <code>.com.vach.common.proto.PropertyDetails.Utilities utilities = 5;</code>
+     */
+    public boolean hasUtilities() {
+      return utilities_ != null;
+    }
+    /**
+     * <code>.com.vach.common.proto.PropertyDetails.Utilities utilities = 5;</code>
+     */
+    public com.vach.common.proto.ProtoCommon.PropertyDetails.Utilities getUtilities() {
+      return utilities_ == null ? com.vach.common.proto.ProtoCommon.PropertyDetails.Utilities.getDefaultInstance() : utilities_;
+    }
+    /**
+     * <code>.com.vach.common.proto.PropertyDetails.Utilities utilities = 5;</code>
+     */
+    public com.vach.common.proto.ProtoCommon.PropertyDetails.UtilitiesOrBuilder getUtilitiesOrBuilder() {
+      return getUtilities();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getAddressBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, address_);
+      }
+      if (!getCityBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, city_);
+      }
+      if (!getStateBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, state_);
+      }
+      if (!getZipBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, zip_);
+      }
+      if (utilities_ != null) {
+        output.writeMessage(5, getUtilities());
+      }
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getAddressBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, address_);
+      }
+      if (!getCityBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, city_);
+      }
+      if (!getStateBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, state_);
+      }
+      if (!getZipBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, zip_);
+      }
+      if (utilities_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getUtilities());
+      }
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.vach.common.proto.ProtoCommon.PropertyDetails)) {
+        return super.equals(obj);
+      }
+      com.vach.common.proto.ProtoCommon.PropertyDetails other = (com.vach.common.proto.ProtoCommon.PropertyDetails) obj;
+
+      boolean result = true;
+      result = result && getAddress()
+          .equals(other.getAddress());
+      result = result && getCity()
+          .equals(other.getCity());
+      result = result && getState()
+          .equals(other.getState());
+      result = result && getZip()
+          .equals(other.getZip());
+      result = result && (hasUtilities() == other.hasUtilities());
+      if (hasUtilities()) {
+        result = result && getUtilities()
+            .equals(other.getUtilities());
+      }
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getAddress().hashCode();
+      hash = (37 * hash) + CITY_FIELD_NUMBER;
+      hash = (53 * hash) + getCity().hashCode();
+      hash = (37 * hash) + STATE_FIELD_NUMBER;
+      hash = (53 * hash) + getState().hashCode();
+      hash = (37 * hash) + ZIP_FIELD_NUMBER;
+      hash = (53 * hash) + getZip().hashCode();
+      if (hasUtilities()) {
+        hash = (37 * hash) + UTILITIES_FIELD_NUMBER;
+        hash = (53 * hash) + getUtilities().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.vach.common.proto.ProtoCommon.PropertyDetails parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.vach.common.proto.ProtoCommon.PropertyDetails parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.vach.common.proto.ProtoCommon.PropertyDetails parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.vach.common.proto.ProtoCommon.PropertyDetails parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.vach.common.proto.ProtoCommon.PropertyDetails parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.vach.common.proto.ProtoCommon.PropertyDetails parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.vach.common.proto.ProtoCommon.PropertyDetails parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.vach.common.proto.ProtoCommon.PropertyDetails parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.vach.common.proto.ProtoCommon.PropertyDetails parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.vach.common.proto.ProtoCommon.PropertyDetails parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.vach.common.proto.ProtoCommon.PropertyDetails parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.vach.common.proto.ProtoCommon.PropertyDetails parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.vach.common.proto.ProtoCommon.PropertyDetails prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.vach.common.proto.PropertyDetails}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.vach.common.proto.PropertyDetails)
+        com.vach.common.proto.ProtoCommon.PropertyDetailsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.vach.common.proto.ProtoCommon.internal_static_com_vach_common_proto_PropertyDetails_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.vach.common.proto.ProtoCommon.internal_static_com_vach_common_proto_PropertyDetails_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.vach.common.proto.ProtoCommon.PropertyDetails.class, com.vach.common.proto.ProtoCommon.PropertyDetails.Builder.class);
+      }
+
+      // Construct using com.vach.common.proto.ProtoCommon.PropertyDetails.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        address_ = "";
+
+        city_ = "";
+
+        state_ = "";
+
+        zip_ = "";
+
+        if (utilitiesBuilder_ == null) {
+          utilities_ = null;
+        } else {
+          utilities_ = null;
+          utilitiesBuilder_ = null;
+        }
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.vach.common.proto.ProtoCommon.internal_static_com_vach_common_proto_PropertyDetails_descriptor;
+      }
+
+      public com.vach.common.proto.ProtoCommon.PropertyDetails getDefaultInstanceForType() {
+        return com.vach.common.proto.ProtoCommon.PropertyDetails.getDefaultInstance();
+      }
+
+      public com.vach.common.proto.ProtoCommon.PropertyDetails build() {
+        com.vach.common.proto.ProtoCommon.PropertyDetails result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.vach.common.proto.ProtoCommon.PropertyDetails buildPartial() {
+        com.vach.common.proto.ProtoCommon.PropertyDetails result = new com.vach.common.proto.ProtoCommon.PropertyDetails(this);
+        result.address_ = address_;
+        result.city_ = city_;
+        result.state_ = state_;
+        result.zip_ = zip_;
+        if (utilitiesBuilder_ == null) {
+          result.utilities_ = utilities_;
+        } else {
+          result.utilities_ = utilitiesBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.vach.common.proto.ProtoCommon.PropertyDetails) {
+          return mergeFrom((com.vach.common.proto.ProtoCommon.PropertyDetails)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.vach.common.proto.ProtoCommon.PropertyDetails other) {
+        if (other == com.vach.common.proto.ProtoCommon.PropertyDetails.getDefaultInstance()) return this;
+        if (!other.getAddress().isEmpty()) {
+          address_ = other.address_;
+          onChanged();
+        }
+        if (!other.getCity().isEmpty()) {
+          city_ = other.city_;
+          onChanged();
+        }
+        if (!other.getState().isEmpty()) {
+          state_ = other.state_;
+          onChanged();
+        }
+        if (!other.getZip().isEmpty()) {
+          zip_ = other.zip_;
+          onChanged();
+        }
+        if (other.hasUtilities()) {
+          mergeUtilities(other.getUtilities());
+        }
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.vach.common.proto.ProtoCommon.PropertyDetails parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.vach.common.proto.ProtoCommon.PropertyDetails) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object address_ = "";
+      /**
+       * <code>string address = 1;</code>
+       */
+      public java.lang.String getAddress() {
+        java.lang.Object ref = address_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          address_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string address = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getAddressBytes() {
+        java.lang.Object ref = address_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          address_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string address = 1;</code>
+       */
+      public Builder setAddress(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        address_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 1;</code>
+       */
+      public Builder clearAddress() {
+        
+        address_ = getDefaultInstance().getAddress();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 1;</code>
+       */
+      public Builder setAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        address_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object city_ = "";
+      /**
+       * <code>string city = 2;</code>
+       */
+      public java.lang.String getCity() {
+        java.lang.Object ref = city_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          city_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string city = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getCityBytes() {
+        java.lang.Object ref = city_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          city_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string city = 2;</code>
+       */
+      public Builder setCity(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        city_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string city = 2;</code>
+       */
+      public Builder clearCity() {
+        
+        city_ = getDefaultInstance().getCity();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string city = 2;</code>
+       */
+      public Builder setCityBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        city_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object state_ = "";
+      /**
+       * <code>string state = 3;</code>
+       */
+      public java.lang.String getState() {
+        java.lang.Object ref = state_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          state_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string state = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getStateBytes() {
+        java.lang.Object ref = state_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          state_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string state = 3;</code>
+       */
+      public Builder setState(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        state_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string state = 3;</code>
+       */
+      public Builder clearState() {
+        
+        state_ = getDefaultInstance().getState();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string state = 3;</code>
+       */
+      public Builder setStateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        state_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object zip_ = "";
+      /**
+       * <code>string zip = 4;</code>
+       */
+      public java.lang.String getZip() {
+        java.lang.Object ref = zip_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          zip_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string zip = 4;</code>
+       */
+      public com.google.protobuf.ByteString
+          getZipBytes() {
+        java.lang.Object ref = zip_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          zip_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string zip = 4;</code>
+       */
+      public Builder setZip(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        zip_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string zip = 4;</code>
+       */
+      public Builder clearZip() {
+        
+        zip_ = getDefaultInstance().getZip();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string zip = 4;</code>
+       */
+      public Builder setZipBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        zip_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.vach.common.proto.ProtoCommon.PropertyDetails.Utilities utilities_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.vach.common.proto.ProtoCommon.PropertyDetails.Utilities, com.vach.common.proto.ProtoCommon.PropertyDetails.Utilities.Builder, com.vach.common.proto.ProtoCommon.PropertyDetails.UtilitiesOrBuilder> utilitiesBuilder_;
+      /**
+       * <code>.com.vach.common.proto.PropertyDetails.Utilities utilities = 5;</code>
+       */
+      public boolean hasUtilities() {
+        return utilitiesBuilder_ != null || utilities_ != null;
+      }
+      /**
+       * <code>.com.vach.common.proto.PropertyDetails.Utilities utilities = 5;</code>
+       */
+      public com.vach.common.proto.ProtoCommon.PropertyDetails.Utilities getUtilities() {
+        if (utilitiesBuilder_ == null) {
+          return utilities_ == null ? com.vach.common.proto.ProtoCommon.PropertyDetails.Utilities.getDefaultInstance() : utilities_;
+        } else {
+          return utilitiesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.com.vach.common.proto.PropertyDetails.Utilities utilities = 5;</code>
+       */
+      public Builder setUtilities(com.vach.common.proto.ProtoCommon.PropertyDetails.Utilities value) {
+        if (utilitiesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          utilities_ = value;
+          onChanged();
+        } else {
+          utilitiesBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.vach.common.proto.PropertyDetails.Utilities utilities = 5;</code>
+       */
+      public Builder setUtilities(
+          com.vach.common.proto.ProtoCommon.PropertyDetails.Utilities.Builder builderForValue) {
+        if (utilitiesBuilder_ == null) {
+          utilities_ = builderForValue.build();
+          onChanged();
+        } else {
+          utilitiesBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.vach.common.proto.PropertyDetails.Utilities utilities = 5;</code>
+       */
+      public Builder mergeUtilities(com.vach.common.proto.ProtoCommon.PropertyDetails.Utilities value) {
+        if (utilitiesBuilder_ == null) {
+          if (utilities_ != null) {
+            utilities_ =
+              com.vach.common.proto.ProtoCommon.PropertyDetails.Utilities.newBuilder(utilities_).mergeFrom(value).buildPartial();
+          } else {
+            utilities_ = value;
+          }
+          onChanged();
+        } else {
+          utilitiesBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.vach.common.proto.PropertyDetails.Utilities utilities = 5;</code>
+       */
+      public Builder clearUtilities() {
+        if (utilitiesBuilder_ == null) {
+          utilities_ = null;
+          onChanged();
+        } else {
+          utilities_ = null;
+          utilitiesBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.vach.common.proto.PropertyDetails.Utilities utilities = 5;</code>
+       */
+      public com.vach.common.proto.ProtoCommon.PropertyDetails.Utilities.Builder getUtilitiesBuilder() {
+        
+        onChanged();
+        return getUtilitiesFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.com.vach.common.proto.PropertyDetails.Utilities utilities = 5;</code>
+       */
+      public com.vach.common.proto.ProtoCommon.PropertyDetails.UtilitiesOrBuilder getUtilitiesOrBuilder() {
+        if (utilitiesBuilder_ != null) {
+          return utilitiesBuilder_.getMessageOrBuilder();
+        } else {
+          return utilities_ == null ?
+              com.vach.common.proto.ProtoCommon.PropertyDetails.Utilities.getDefaultInstance() : utilities_;
+        }
+      }
+      /**
+       * <code>.com.vach.common.proto.PropertyDetails.Utilities utilities = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.vach.common.proto.ProtoCommon.PropertyDetails.Utilities, com.vach.common.proto.ProtoCommon.PropertyDetails.Utilities.Builder, com.vach.common.proto.ProtoCommon.PropertyDetails.UtilitiesOrBuilder> 
+          getUtilitiesFieldBuilder() {
+        if (utilitiesBuilder_ == null) {
+          utilitiesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.vach.common.proto.ProtoCommon.PropertyDetails.Utilities, com.vach.common.proto.ProtoCommon.PropertyDetails.Utilities.Builder, com.vach.common.proto.ProtoCommon.PropertyDetails.UtilitiesOrBuilder>(
+                  getUtilities(),
+                  getParentForChildren(),
+                  isClean());
+          utilities_ = null;
+        }
+        return utilitiesBuilder_;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:com.vach.common.proto.PropertyDetails)
+    }
+
+    // @@protoc_insertion_point(class_scope:com.vach.common.proto.PropertyDetails)
+    private static final com.vach.common.proto.ProtoCommon.PropertyDetails DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.vach.common.proto.ProtoCommon.PropertyDetails();
+    }
+
+    public static com.vach.common.proto.ProtoCommon.PropertyDetails getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PropertyDetails>
+        PARSER = new com.google.protobuf.AbstractParser<PropertyDetails>() {
+      public PropertyDetails parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new PropertyDetails(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<PropertyDetails> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PropertyDetails> getParserForType() {
+      return PARSER;
+    }
+
+    public com.vach.common.proto.ProtoCommon.PropertyDetails getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PropertyOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.vach.common.proto.Property)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string propertyId = 1;</code>
+     */
+    java.lang.String getPropertyId();
+    /**
+     * <code>string propertyId = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getPropertyIdBytes();
+
+    /**
+     * <code>.com.vach.common.proto.PropertyDetails propertyDetails = 2;</code>
+     */
+    boolean hasPropertyDetails();
+    /**
+     * <code>.com.vach.common.proto.PropertyDetails propertyDetails = 2;</code>
+     */
+    com.vach.common.proto.ProtoCommon.PropertyDetails getPropertyDetails();
+    /**
+     * <code>.com.vach.common.proto.PropertyDetails propertyDetails = 2;</code>
+     */
+    com.vach.common.proto.ProtoCommon.PropertyDetailsOrBuilder getPropertyDetailsOrBuilder();
+
+    /**
+     * <code>string updatedAt = 3;</code>
+     */
+    java.lang.String getUpdatedAt();
+    /**
+     * <code>string updatedAt = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getUpdatedAtBytes();
+
+    /**
+     * <code>string createdAt = 4;</code>
+     */
+    java.lang.String getCreatedAt();
+    /**
+     * <code>string createdAt = 4;</code>
+     */
+    com.google.protobuf.ByteString
+        getCreatedAtBytes();
+  }
+  /**
+   * Protobuf type {@code com.vach.common.proto.Property}
+   */
+  public  static final class Property extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:com.vach.common.proto.Property)
+      PropertyOrBuilder {
+    // Use Property.newBuilder() to construct.
+    private Property(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Property() {
+      propertyId_ = "";
+      updatedAt_ = "";
+      createdAt_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+    }
+    private Property(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!input.skipField(tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              propertyId_ = s;
+              break;
+            }
+            case 18: {
+              com.vach.common.proto.ProtoCommon.PropertyDetails.Builder subBuilder = null;
+              if (propertyDetails_ != null) {
+                subBuilder = propertyDetails_.toBuilder();
+              }
+              propertyDetails_ = input.readMessage(com.vach.common.proto.ProtoCommon.PropertyDetails.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(propertyDetails_);
+                propertyDetails_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              updatedAt_ = s;
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              createdAt_ = s;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.vach.common.proto.ProtoCommon.internal_static_com_vach_common_proto_Property_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.vach.common.proto.ProtoCommon.internal_static_com_vach_common_proto_Property_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.vach.common.proto.ProtoCommon.Property.class, com.vach.common.proto.ProtoCommon.Property.Builder.class);
+    }
+
+    public static final int PROPERTYID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object propertyId_;
+    /**
+     * <code>string propertyId = 1;</code>
+     */
+    public java.lang.String getPropertyId() {
+      java.lang.Object ref = propertyId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        propertyId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string propertyId = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getPropertyIdBytes() {
+      java.lang.Object ref = propertyId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        propertyId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PROPERTYDETAILS_FIELD_NUMBER = 2;
+    private com.vach.common.proto.ProtoCommon.PropertyDetails propertyDetails_;
+    /**
+     * <code>.com.vach.common.proto.PropertyDetails propertyDetails = 2;</code>
+     */
+    public boolean hasPropertyDetails() {
+      return propertyDetails_ != null;
+    }
+    /**
+     * <code>.com.vach.common.proto.PropertyDetails propertyDetails = 2;</code>
+     */
+    public com.vach.common.proto.ProtoCommon.PropertyDetails getPropertyDetails() {
+      return propertyDetails_ == null ? com.vach.common.proto.ProtoCommon.PropertyDetails.getDefaultInstance() : propertyDetails_;
+    }
+    /**
+     * <code>.com.vach.common.proto.PropertyDetails propertyDetails = 2;</code>
+     */
+    public com.vach.common.proto.ProtoCommon.PropertyDetailsOrBuilder getPropertyDetailsOrBuilder() {
+      return getPropertyDetails();
+    }
+
+    public static final int UPDATEDAT_FIELD_NUMBER = 3;
+    private volatile java.lang.Object updatedAt_;
+    /**
+     * <code>string updatedAt = 3;</code>
+     */
+    public java.lang.String getUpdatedAt() {
+      java.lang.Object ref = updatedAt_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        updatedAt_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string updatedAt = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getUpdatedAtBytes() {
+      java.lang.Object ref = updatedAt_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        updatedAt_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CREATEDAT_FIELD_NUMBER = 4;
+    private volatile java.lang.Object createdAt_;
+    /**
+     * <code>string createdAt = 4;</code>
+     */
+    public java.lang.String getCreatedAt() {
+      java.lang.Object ref = createdAt_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        createdAt_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string createdAt = 4;</code>
+     */
+    public com.google.protobuf.ByteString
+        getCreatedAtBytes() {
+      java.lang.Object ref = createdAt_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        createdAt_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getPropertyIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, propertyId_);
+      }
+      if (propertyDetails_ != null) {
+        output.writeMessage(2, getPropertyDetails());
+      }
+      if (!getUpdatedAtBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, updatedAt_);
+      }
+      if (!getCreatedAtBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, createdAt_);
+      }
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getPropertyIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, propertyId_);
+      }
+      if (propertyDetails_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPropertyDetails());
+      }
+      if (!getUpdatedAtBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, updatedAt_);
+      }
+      if (!getCreatedAtBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, createdAt_);
+      }
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.vach.common.proto.ProtoCommon.Property)) {
+        return super.equals(obj);
+      }
+      com.vach.common.proto.ProtoCommon.Property other = (com.vach.common.proto.ProtoCommon.Property) obj;
+
+      boolean result = true;
+      result = result && getPropertyId()
+          .equals(other.getPropertyId());
+      result = result && (hasPropertyDetails() == other.hasPropertyDetails());
+      if (hasPropertyDetails()) {
+        result = result && getPropertyDetails()
+            .equals(other.getPropertyDetails());
+      }
+      result = result && getUpdatedAt()
+          .equals(other.getUpdatedAt());
+      result = result && getCreatedAt()
+          .equals(other.getCreatedAt());
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PROPERTYID_FIELD_NUMBER;
+      hash = (53 * hash) + getPropertyId().hashCode();
+      if (hasPropertyDetails()) {
+        hash = (37 * hash) + PROPERTYDETAILS_FIELD_NUMBER;
+        hash = (53 * hash) + getPropertyDetails().hashCode();
+      }
+      hash = (37 * hash) + UPDATEDAT_FIELD_NUMBER;
+      hash = (53 * hash) + getUpdatedAt().hashCode();
+      hash = (37 * hash) + CREATEDAT_FIELD_NUMBER;
+      hash = (53 * hash) + getCreatedAt().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.vach.common.proto.ProtoCommon.Property parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.vach.common.proto.ProtoCommon.Property parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.vach.common.proto.ProtoCommon.Property parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.vach.common.proto.ProtoCommon.Property parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.vach.common.proto.ProtoCommon.Property parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.vach.common.proto.ProtoCommon.Property parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.vach.common.proto.ProtoCommon.Property parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.vach.common.proto.ProtoCommon.Property parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.vach.common.proto.ProtoCommon.Property parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.vach.common.proto.ProtoCommon.Property parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.vach.common.proto.ProtoCommon.Property parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.vach.common.proto.ProtoCommon.Property parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.vach.common.proto.ProtoCommon.Property prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.vach.common.proto.Property}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.vach.common.proto.Property)
+        com.vach.common.proto.ProtoCommon.PropertyOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.vach.common.proto.ProtoCommon.internal_static_com_vach_common_proto_Property_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.vach.common.proto.ProtoCommon.internal_static_com_vach_common_proto_Property_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.vach.common.proto.ProtoCommon.Property.class, com.vach.common.proto.ProtoCommon.Property.Builder.class);
+      }
+
+      // Construct using com.vach.common.proto.ProtoCommon.Property.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        propertyId_ = "";
+
+        if (propertyDetailsBuilder_ == null) {
+          propertyDetails_ = null;
+        } else {
+          propertyDetails_ = null;
+          propertyDetailsBuilder_ = null;
+        }
+        updatedAt_ = "";
+
+        createdAt_ = "";
+
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.vach.common.proto.ProtoCommon.internal_static_com_vach_common_proto_Property_descriptor;
+      }
+
+      public com.vach.common.proto.ProtoCommon.Property getDefaultInstanceForType() {
+        return com.vach.common.proto.ProtoCommon.Property.getDefaultInstance();
+      }
+
+      public com.vach.common.proto.ProtoCommon.Property build() {
+        com.vach.common.proto.ProtoCommon.Property result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.vach.common.proto.ProtoCommon.Property buildPartial() {
+        com.vach.common.proto.ProtoCommon.Property result = new com.vach.common.proto.ProtoCommon.Property(this);
+        result.propertyId_ = propertyId_;
+        if (propertyDetailsBuilder_ == null) {
+          result.propertyDetails_ = propertyDetails_;
+        } else {
+          result.propertyDetails_ = propertyDetailsBuilder_.build();
+        }
+        result.updatedAt_ = updatedAt_;
+        result.createdAt_ = createdAt_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.vach.common.proto.ProtoCommon.Property) {
+          return mergeFrom((com.vach.common.proto.ProtoCommon.Property)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.vach.common.proto.ProtoCommon.Property other) {
+        if (other == com.vach.common.proto.ProtoCommon.Property.getDefaultInstance()) return this;
+        if (!other.getPropertyId().isEmpty()) {
+          propertyId_ = other.propertyId_;
+          onChanged();
+        }
+        if (other.hasPropertyDetails()) {
+          mergePropertyDetails(other.getPropertyDetails());
+        }
+        if (!other.getUpdatedAt().isEmpty()) {
+          updatedAt_ = other.updatedAt_;
+          onChanged();
+        }
+        if (!other.getCreatedAt().isEmpty()) {
+          createdAt_ = other.createdAt_;
+          onChanged();
+        }
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.vach.common.proto.ProtoCommon.Property parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.vach.common.proto.ProtoCommon.Property) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object propertyId_ = "";
+      /**
+       * <code>string propertyId = 1;</code>
+       */
+      public java.lang.String getPropertyId() {
+        java.lang.Object ref = propertyId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          propertyId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string propertyId = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getPropertyIdBytes() {
+        java.lang.Object ref = propertyId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          propertyId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string propertyId = 1;</code>
+       */
+      public Builder setPropertyId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        propertyId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string propertyId = 1;</code>
+       */
+      public Builder clearPropertyId() {
+        
+        propertyId_ = getDefaultInstance().getPropertyId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string propertyId = 1;</code>
+       */
+      public Builder setPropertyIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        propertyId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.vach.common.proto.ProtoCommon.PropertyDetails propertyDetails_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.vach.common.proto.ProtoCommon.PropertyDetails, com.vach.common.proto.ProtoCommon.PropertyDetails.Builder, com.vach.common.proto.ProtoCommon.PropertyDetailsOrBuilder> propertyDetailsBuilder_;
+      /**
+       * <code>.com.vach.common.proto.PropertyDetails propertyDetails = 2;</code>
+       */
+      public boolean hasPropertyDetails() {
+        return propertyDetailsBuilder_ != null || propertyDetails_ != null;
+      }
+      /**
+       * <code>.com.vach.common.proto.PropertyDetails propertyDetails = 2;</code>
+       */
+      public com.vach.common.proto.ProtoCommon.PropertyDetails getPropertyDetails() {
+        if (propertyDetailsBuilder_ == null) {
+          return propertyDetails_ == null ? com.vach.common.proto.ProtoCommon.PropertyDetails.getDefaultInstance() : propertyDetails_;
+        } else {
+          return propertyDetailsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.com.vach.common.proto.PropertyDetails propertyDetails = 2;</code>
+       */
+      public Builder setPropertyDetails(com.vach.common.proto.ProtoCommon.PropertyDetails value) {
+        if (propertyDetailsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          propertyDetails_ = value;
+          onChanged();
+        } else {
+          propertyDetailsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.vach.common.proto.PropertyDetails propertyDetails = 2;</code>
+       */
+      public Builder setPropertyDetails(
+          com.vach.common.proto.ProtoCommon.PropertyDetails.Builder builderForValue) {
+        if (propertyDetailsBuilder_ == null) {
+          propertyDetails_ = builderForValue.build();
+          onChanged();
+        } else {
+          propertyDetailsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.vach.common.proto.PropertyDetails propertyDetails = 2;</code>
+       */
+      public Builder mergePropertyDetails(com.vach.common.proto.ProtoCommon.PropertyDetails value) {
+        if (propertyDetailsBuilder_ == null) {
+          if (propertyDetails_ != null) {
+            propertyDetails_ =
+              com.vach.common.proto.ProtoCommon.PropertyDetails.newBuilder(propertyDetails_).mergeFrom(value).buildPartial();
+          } else {
+            propertyDetails_ = value;
+          }
+          onChanged();
+        } else {
+          propertyDetailsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.vach.common.proto.PropertyDetails propertyDetails = 2;</code>
+       */
+      public Builder clearPropertyDetails() {
+        if (propertyDetailsBuilder_ == null) {
+          propertyDetails_ = null;
+          onChanged();
+        } else {
+          propertyDetails_ = null;
+          propertyDetailsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.vach.common.proto.PropertyDetails propertyDetails = 2;</code>
+       */
+      public com.vach.common.proto.ProtoCommon.PropertyDetails.Builder getPropertyDetailsBuilder() {
+        
+        onChanged();
+        return getPropertyDetailsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.com.vach.common.proto.PropertyDetails propertyDetails = 2;</code>
+       */
+      public com.vach.common.proto.ProtoCommon.PropertyDetailsOrBuilder getPropertyDetailsOrBuilder() {
+        if (propertyDetailsBuilder_ != null) {
+          return propertyDetailsBuilder_.getMessageOrBuilder();
+        } else {
+          return propertyDetails_ == null ?
+              com.vach.common.proto.ProtoCommon.PropertyDetails.getDefaultInstance() : propertyDetails_;
+        }
+      }
+      /**
+       * <code>.com.vach.common.proto.PropertyDetails propertyDetails = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.vach.common.proto.ProtoCommon.PropertyDetails, com.vach.common.proto.ProtoCommon.PropertyDetails.Builder, com.vach.common.proto.ProtoCommon.PropertyDetailsOrBuilder> 
+          getPropertyDetailsFieldBuilder() {
+        if (propertyDetailsBuilder_ == null) {
+          propertyDetailsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.vach.common.proto.ProtoCommon.PropertyDetails, com.vach.common.proto.ProtoCommon.PropertyDetails.Builder, com.vach.common.proto.ProtoCommon.PropertyDetailsOrBuilder>(
+                  getPropertyDetails(),
+                  getParentForChildren(),
+                  isClean());
+          propertyDetails_ = null;
+        }
+        return propertyDetailsBuilder_;
+      }
+
+      private java.lang.Object updatedAt_ = "";
+      /**
+       * <code>string updatedAt = 3;</code>
+       */
+      public java.lang.String getUpdatedAt() {
+        java.lang.Object ref = updatedAt_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          updatedAt_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string updatedAt = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getUpdatedAtBytes() {
+        java.lang.Object ref = updatedAt_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          updatedAt_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string updatedAt = 3;</code>
+       */
+      public Builder setUpdatedAt(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        updatedAt_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string updatedAt = 3;</code>
+       */
+      public Builder clearUpdatedAt() {
+        
+        updatedAt_ = getDefaultInstance().getUpdatedAt();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string updatedAt = 3;</code>
+       */
+      public Builder setUpdatedAtBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        updatedAt_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object createdAt_ = "";
+      /**
+       * <code>string createdAt = 4;</code>
+       */
+      public java.lang.String getCreatedAt() {
+        java.lang.Object ref = createdAt_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          createdAt_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string createdAt = 4;</code>
+       */
+      public com.google.protobuf.ByteString
+          getCreatedAtBytes() {
+        java.lang.Object ref = createdAt_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          createdAt_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string createdAt = 4;</code>
+       */
+      public Builder setCreatedAt(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        createdAt_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string createdAt = 4;</code>
+       */
+      public Builder clearCreatedAt() {
+        
+        createdAt_ = getDefaultInstance().getCreatedAt();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string createdAt = 4;</code>
+       */
+      public Builder setCreatedAtBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        createdAt_ = value;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:com.vach.common.proto.Property)
+    }
+
+    // @@protoc_insertion_point(class_scope:com.vach.common.proto.Property)
+    private static final com.vach.common.proto.ProtoCommon.Property DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.vach.common.proto.ProtoCommon.Property();
+    }
+
+    public static com.vach.common.proto.ProtoCommon.Property getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Property>
+        PARSER = new com.google.protobuf.AbstractParser<Property>() {
+      public Property parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new Property(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Property> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Property> getParserForType() {
+      return PARSER;
+    }
+
+    public com.vach.common.proto.ProtoCommon.Property getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface AddPropertyRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.vach.common.proto.AddPropertyRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string propertyId = 1;</code>
+     */
+    java.lang.String getPropertyId();
+    /**
+     * <code>string propertyId = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getPropertyIdBytes();
+
+    /**
+     * <code>.com.vach.common.proto.PropertyDetails propertyDetails = 2;</code>
+     */
+    boolean hasPropertyDetails();
+    /**
+     * <code>.com.vach.common.proto.PropertyDetails propertyDetails = 2;</code>
+     */
+    com.vach.common.proto.ProtoCommon.PropertyDetails getPropertyDetails();
+    /**
+     * <code>.com.vach.common.proto.PropertyDetails propertyDetails = 2;</code>
+     */
+    com.vach.common.proto.ProtoCommon.PropertyDetailsOrBuilder getPropertyDetailsOrBuilder();
+  }
+  /**
+   * Protobuf type {@code com.vach.common.proto.AddPropertyRequest}
+   */
+  public  static final class AddPropertyRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:com.vach.common.proto.AddPropertyRequest)
+      AddPropertyRequestOrBuilder {
+    // Use AddPropertyRequest.newBuilder() to construct.
+    private AddPropertyRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AddPropertyRequest() {
+      propertyId_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+    }
+    private AddPropertyRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!input.skipField(tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              propertyId_ = s;
+              break;
+            }
+            case 18: {
+              com.vach.common.proto.ProtoCommon.PropertyDetails.Builder subBuilder = null;
+              if (propertyDetails_ != null) {
+                subBuilder = propertyDetails_.toBuilder();
+              }
+              propertyDetails_ = input.readMessage(com.vach.common.proto.ProtoCommon.PropertyDetails.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(propertyDetails_);
+                propertyDetails_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.vach.common.proto.ProtoCommon.internal_static_com_vach_common_proto_AddPropertyRequest_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.vach.common.proto.ProtoCommon.internal_static_com_vach_common_proto_AddPropertyRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.vach.common.proto.ProtoCommon.AddPropertyRequest.class, com.vach.common.proto.ProtoCommon.AddPropertyRequest.Builder.class);
+    }
+
+    public static final int PROPERTYID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object propertyId_;
+    /**
+     * <code>string propertyId = 1;</code>
+     */
+    public java.lang.String getPropertyId() {
+      java.lang.Object ref = propertyId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        propertyId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string propertyId = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getPropertyIdBytes() {
+      java.lang.Object ref = propertyId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        propertyId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PROPERTYDETAILS_FIELD_NUMBER = 2;
+    private com.vach.common.proto.ProtoCommon.PropertyDetails propertyDetails_;
+    /**
+     * <code>.com.vach.common.proto.PropertyDetails propertyDetails = 2;</code>
+     */
+    public boolean hasPropertyDetails() {
+      return propertyDetails_ != null;
+    }
+    /**
+     * <code>.com.vach.common.proto.PropertyDetails propertyDetails = 2;</code>
+     */
+    public com.vach.common.proto.ProtoCommon.PropertyDetails getPropertyDetails() {
+      return propertyDetails_ == null ? com.vach.common.proto.ProtoCommon.PropertyDetails.getDefaultInstance() : propertyDetails_;
+    }
+    /**
+     * <code>.com.vach.common.proto.PropertyDetails propertyDetails = 2;</code>
+     */
+    public com.vach.common.proto.ProtoCommon.PropertyDetailsOrBuilder getPropertyDetailsOrBuilder() {
+      return getPropertyDetails();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getPropertyIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, propertyId_);
+      }
+      if (propertyDetails_ != null) {
+        output.writeMessage(2, getPropertyDetails());
+      }
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getPropertyIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, propertyId_);
+      }
+      if (propertyDetails_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPropertyDetails());
+      }
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.vach.common.proto.ProtoCommon.AddPropertyRequest)) {
+        return super.equals(obj);
+      }
+      com.vach.common.proto.ProtoCommon.AddPropertyRequest other = (com.vach.common.proto.ProtoCommon.AddPropertyRequest) obj;
+
+      boolean result = true;
+      result = result && getPropertyId()
+          .equals(other.getPropertyId());
+      result = result && (hasPropertyDetails() == other.hasPropertyDetails());
+      if (hasPropertyDetails()) {
+        result = result && getPropertyDetails()
+            .equals(other.getPropertyDetails());
+      }
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PROPERTYID_FIELD_NUMBER;
+      hash = (53 * hash) + getPropertyId().hashCode();
+      if (hasPropertyDetails()) {
+        hash = (37 * hash) + PROPERTYDETAILS_FIELD_NUMBER;
+        hash = (53 * hash) + getPropertyDetails().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.vach.common.proto.ProtoCommon.AddPropertyRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.vach.common.proto.ProtoCommon.AddPropertyRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.vach.common.proto.ProtoCommon.AddPropertyRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.vach.common.proto.ProtoCommon.AddPropertyRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.vach.common.proto.ProtoCommon.AddPropertyRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.vach.common.proto.ProtoCommon.AddPropertyRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.vach.common.proto.ProtoCommon.AddPropertyRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.vach.common.proto.ProtoCommon.AddPropertyRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.vach.common.proto.ProtoCommon.AddPropertyRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.vach.common.proto.ProtoCommon.AddPropertyRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.vach.common.proto.ProtoCommon.AddPropertyRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.vach.common.proto.ProtoCommon.AddPropertyRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.vach.common.proto.ProtoCommon.AddPropertyRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.vach.common.proto.AddPropertyRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.vach.common.proto.AddPropertyRequest)
+        com.vach.common.proto.ProtoCommon.AddPropertyRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.vach.common.proto.ProtoCommon.internal_static_com_vach_common_proto_AddPropertyRequest_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.vach.common.proto.ProtoCommon.internal_static_com_vach_common_proto_AddPropertyRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.vach.common.proto.ProtoCommon.AddPropertyRequest.class, com.vach.common.proto.ProtoCommon.AddPropertyRequest.Builder.class);
+      }
+
+      // Construct using com.vach.common.proto.ProtoCommon.AddPropertyRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        propertyId_ = "";
+
+        if (propertyDetailsBuilder_ == null) {
+          propertyDetails_ = null;
+        } else {
+          propertyDetails_ = null;
+          propertyDetailsBuilder_ = null;
+        }
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.vach.common.proto.ProtoCommon.internal_static_com_vach_common_proto_AddPropertyRequest_descriptor;
+      }
+
+      public com.vach.common.proto.ProtoCommon.AddPropertyRequest getDefaultInstanceForType() {
+        return com.vach.common.proto.ProtoCommon.AddPropertyRequest.getDefaultInstance();
+      }
+
+      public com.vach.common.proto.ProtoCommon.AddPropertyRequest build() {
+        com.vach.common.proto.ProtoCommon.AddPropertyRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.vach.common.proto.ProtoCommon.AddPropertyRequest buildPartial() {
+        com.vach.common.proto.ProtoCommon.AddPropertyRequest result = new com.vach.common.proto.ProtoCommon.AddPropertyRequest(this);
+        result.propertyId_ = propertyId_;
+        if (propertyDetailsBuilder_ == null) {
+          result.propertyDetails_ = propertyDetails_;
+        } else {
+          result.propertyDetails_ = propertyDetailsBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.vach.common.proto.ProtoCommon.AddPropertyRequest) {
+          return mergeFrom((com.vach.common.proto.ProtoCommon.AddPropertyRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.vach.common.proto.ProtoCommon.AddPropertyRequest other) {
+        if (other == com.vach.common.proto.ProtoCommon.AddPropertyRequest.getDefaultInstance()) return this;
+        if (!other.getPropertyId().isEmpty()) {
+          propertyId_ = other.propertyId_;
+          onChanged();
+        }
+        if (other.hasPropertyDetails()) {
+          mergePropertyDetails(other.getPropertyDetails());
+        }
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.vach.common.proto.ProtoCommon.AddPropertyRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.vach.common.proto.ProtoCommon.AddPropertyRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object propertyId_ = "";
+      /**
+       * <code>string propertyId = 1;</code>
+       */
+      public java.lang.String getPropertyId() {
+        java.lang.Object ref = propertyId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          propertyId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string propertyId = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getPropertyIdBytes() {
+        java.lang.Object ref = propertyId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          propertyId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string propertyId = 1;</code>
+       */
+      public Builder setPropertyId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        propertyId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string propertyId = 1;</code>
+       */
+      public Builder clearPropertyId() {
+        
+        propertyId_ = getDefaultInstance().getPropertyId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string propertyId = 1;</code>
+       */
+      public Builder setPropertyIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        propertyId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.vach.common.proto.ProtoCommon.PropertyDetails propertyDetails_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.vach.common.proto.ProtoCommon.PropertyDetails, com.vach.common.proto.ProtoCommon.PropertyDetails.Builder, com.vach.common.proto.ProtoCommon.PropertyDetailsOrBuilder> propertyDetailsBuilder_;
+      /**
+       * <code>.com.vach.common.proto.PropertyDetails propertyDetails = 2;</code>
+       */
+      public boolean hasPropertyDetails() {
+        return propertyDetailsBuilder_ != null || propertyDetails_ != null;
+      }
+      /**
+       * <code>.com.vach.common.proto.PropertyDetails propertyDetails = 2;</code>
+       */
+      public com.vach.common.proto.ProtoCommon.PropertyDetails getPropertyDetails() {
+        if (propertyDetailsBuilder_ == null) {
+          return propertyDetails_ == null ? com.vach.common.proto.ProtoCommon.PropertyDetails.getDefaultInstance() : propertyDetails_;
+        } else {
+          return propertyDetailsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.com.vach.common.proto.PropertyDetails propertyDetails = 2;</code>
+       */
+      public Builder setPropertyDetails(com.vach.common.proto.ProtoCommon.PropertyDetails value) {
+        if (propertyDetailsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          propertyDetails_ = value;
+          onChanged();
+        } else {
+          propertyDetailsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.vach.common.proto.PropertyDetails propertyDetails = 2;</code>
+       */
+      public Builder setPropertyDetails(
+          com.vach.common.proto.ProtoCommon.PropertyDetails.Builder builderForValue) {
+        if (propertyDetailsBuilder_ == null) {
+          propertyDetails_ = builderForValue.build();
+          onChanged();
+        } else {
+          propertyDetailsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.vach.common.proto.PropertyDetails propertyDetails = 2;</code>
+       */
+      public Builder mergePropertyDetails(com.vach.common.proto.ProtoCommon.PropertyDetails value) {
+        if (propertyDetailsBuilder_ == null) {
+          if (propertyDetails_ != null) {
+            propertyDetails_ =
+              com.vach.common.proto.ProtoCommon.PropertyDetails.newBuilder(propertyDetails_).mergeFrom(value).buildPartial();
+          } else {
+            propertyDetails_ = value;
+          }
+          onChanged();
+        } else {
+          propertyDetailsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.vach.common.proto.PropertyDetails propertyDetails = 2;</code>
+       */
+      public Builder clearPropertyDetails() {
+        if (propertyDetailsBuilder_ == null) {
+          propertyDetails_ = null;
+          onChanged();
+        } else {
+          propertyDetails_ = null;
+          propertyDetailsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.vach.common.proto.PropertyDetails propertyDetails = 2;</code>
+       */
+      public com.vach.common.proto.ProtoCommon.PropertyDetails.Builder getPropertyDetailsBuilder() {
+        
+        onChanged();
+        return getPropertyDetailsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.com.vach.common.proto.PropertyDetails propertyDetails = 2;</code>
+       */
+      public com.vach.common.proto.ProtoCommon.PropertyDetailsOrBuilder getPropertyDetailsOrBuilder() {
+        if (propertyDetailsBuilder_ != null) {
+          return propertyDetailsBuilder_.getMessageOrBuilder();
+        } else {
+          return propertyDetails_ == null ?
+              com.vach.common.proto.ProtoCommon.PropertyDetails.getDefaultInstance() : propertyDetails_;
+        }
+      }
+      /**
+       * <code>.com.vach.common.proto.PropertyDetails propertyDetails = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.vach.common.proto.ProtoCommon.PropertyDetails, com.vach.common.proto.ProtoCommon.PropertyDetails.Builder, com.vach.common.proto.ProtoCommon.PropertyDetailsOrBuilder> 
+          getPropertyDetailsFieldBuilder() {
+        if (propertyDetailsBuilder_ == null) {
+          propertyDetailsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.vach.common.proto.ProtoCommon.PropertyDetails, com.vach.common.proto.ProtoCommon.PropertyDetails.Builder, com.vach.common.proto.ProtoCommon.PropertyDetailsOrBuilder>(
+                  getPropertyDetails(),
+                  getParentForChildren(),
+                  isClean());
+          propertyDetails_ = null;
+        }
+        return propertyDetailsBuilder_;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:com.vach.common.proto.AddPropertyRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:com.vach.common.proto.AddPropertyRequest)
+    private static final com.vach.common.proto.ProtoCommon.AddPropertyRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.vach.common.proto.ProtoCommon.AddPropertyRequest();
+    }
+
+    public static com.vach.common.proto.ProtoCommon.AddPropertyRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AddPropertyRequest>
+        PARSER = new com.google.protobuf.AbstractParser<AddPropertyRequest>() {
+      public AddPropertyRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new AddPropertyRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<AddPropertyRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AddPropertyRequest> getParserForType() {
+      return PARSER;
+    }
+
+    public com.vach.common.proto.ProtoCommon.AddPropertyRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_vach_common_proto_TestBoolValue_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_vach_common_proto_TestBoolValue_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_vach_common_proto_PropertyDetails_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_vach_common_proto_PropertyDetails_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_vach_common_proto_PropertyDetails_Utilities_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_vach_common_proto_PropertyDetails_Utilities_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_vach_common_proto_Property_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_vach_common_proto_Property_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_vach_common_proto_AddPropertyRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_vach_common_proto_AddPropertyRequest_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -602,7 +4256,20 @@ public final class ProtoCommon {
       "\n\014sample.proto\022\025com.vach.common.proto\032\036g" +
       "oogle/protobuf/wrappers.proto\"B\n\rTestBoo" +
       "lValue\0221\n\rsomeBoolValue\030\001 \001(\0132\032.google.p" +
-      "rotobuf.BoolValueB\rB\013ProtoCommonb\006proto3"
+      "rotobuf.BoolValue\"\213\002\n\017PropertyDetails\022\017\n" +
+      "\007address\030\001 \001(\t\022\014\n\004city\030\002 \001(\t\022\r\n\005state\030\003 " +
+      "\001(\t\022\013\n\003zip\030\004 \001(\t\022C\n\tutilities\030\005 \001(\01320.co" +
+      "m.vach.common.proto.PropertyDetails.Util" +
+      "ities\032x\n\tUtilities\022\020\n\010electric\030\001 \001(\010\022\013\n\003" +
+      "gas\030\002 \001(\010\022\r\n\005water\030\003 \001(\010\022\r\n\005sewer\030\004 \001(\010\022" +
+      "\r\n\005trash\030\005 \001(\010\022\020\n\010internet\030\006 \001(\010\022\r\n\005cabl",
+      "e\030\007 \001(\010\"\205\001\n\010Property\022\022\n\npropertyId\030\001 \001(\t" +
+      "\022?\n\017propertyDetails\030\002 \001(\0132&.com.vach.com" +
+      "mon.proto.PropertyDetails\022\021\n\tupdatedAt\030\003" +
+      " \001(\t\022\021\n\tcreatedAt\030\004 \001(\t\"i\n\022AddPropertyRe" +
+      "quest\022\022\n\npropertyId\030\001 \001(\t\022?\n\017propertyDet" +
+      "ails\030\002 \001(\0132&.com.vach.common.proto.Prope" +
+      "rtyDetailsB\rB\013ProtoCommonb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -623,6 +4290,30 @@ public final class ProtoCommon {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_vach_common_proto_TestBoolValue_descriptor,
         new java.lang.String[] { "SomeBoolValue", });
+    internal_static_com_vach_common_proto_PropertyDetails_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_com_vach_common_proto_PropertyDetails_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_vach_common_proto_PropertyDetails_descriptor,
+        new java.lang.String[] { "Address", "City", "State", "Zip", "Utilities", });
+    internal_static_com_vach_common_proto_PropertyDetails_Utilities_descriptor =
+      internal_static_com_vach_common_proto_PropertyDetails_descriptor.getNestedTypes().get(0);
+    internal_static_com_vach_common_proto_PropertyDetails_Utilities_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_vach_common_proto_PropertyDetails_Utilities_descriptor,
+        new java.lang.String[] { "Electric", "Gas", "Water", "Sewer", "Trash", "Internet", "Cable", });
+    internal_static_com_vach_common_proto_Property_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_com_vach_common_proto_Property_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_vach_common_proto_Property_descriptor,
+        new java.lang.String[] { "PropertyId", "PropertyDetails", "UpdatedAt", "CreatedAt", });
+    internal_static_com_vach_common_proto_AddPropertyRequest_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_com_vach_common_proto_AddPropertyRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_vach_common_proto_AddPropertyRequest_descriptor,
+        new java.lang.String[] { "PropertyId", "PropertyDetails", });
     com.google.protobuf.WrappersProto.getDescriptor();
   }
 
