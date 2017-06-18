@@ -9,10 +9,12 @@ Main goal of this project is to show some time-to-time to reproducible problems 
 
 So here in tests there are 2 cases
 
-* TestMappingWithNULLValue tests are working time to time, either ok either converter does not work at all.
+* TestMappingWithTrueValue tests are working time to time, either ok either converter does not work at all.
 This is like bug that reproduces time to time.
 
 * second test case TestMappingWithNULLValue which is ignored, because some kind of workaround need to be created
  pseudocode : `if  (source.getParent().hasSomeBoolValue()) { return value; } else { return null;}
+
+* occasionally does not map value that starts with `W` like in test NotMappingValuesStartsWithW
 
 

@@ -1,24 +1,17 @@
-import com.google.protobuf.BoolValue;
 import com.vach.common.proto.ProtoCommon;
 import com.vach.sample.ModelMapperFactory;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-import org.modelmapper.Conditions;
-import org.modelmapper.Converter;
 import org.modelmapper.ModelMapper;
-import org.modelmapper.convention.MatchingStrategies;
-import org.modelmapper.spi.MappingContext;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.Optional;
 
-import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
 @RunWith(Parameterized.class)
-public class MoreComplicatedCase {
+public class NotMappingValuesStartsWithW {
 
     @Parameterized.Parameters
     public static List<Object[]> data() {
@@ -44,8 +37,13 @@ public class MoreComplicatedCase {
 
         ProtoCommon.AddPropertyRequest builder = modelMapper.map(property, ProtoCommon.AddPropertyRequest.Builder.class).build();
 
-        System.out.println(builder.getPropertyDetails().getUtilities().getWater());
-        assertNotNull(builder.getPropertyDetails().getUtilities().getWater());
-        assertTrue(builder.getPropertyDetails().getUtilities().getWater());  // some times is is false!!!
+
+        assertTrue(builder.getPropertyDetails().getUtilities().getElectric());
+        assertTrue(builder.getPropertyDetails().getUtilities().getGas());
+        assertTrue(builder.getPropertyDetails().getUtilities().getSewer());
+        assertTrue(builder.getPropertyDetails().getUtilities().getTrash());
+        assertTrue(builder.getPropertyDetails().getUtilities().getInternet());
+        assertTrue(builder.getPropertyDetails().getUtilities().getCable());
+        assertTrue(builder.getPropertyDetails().getUtilities().getWater());  // some times it is false!!!
     }
 }
