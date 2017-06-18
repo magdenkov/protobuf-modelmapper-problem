@@ -19,6 +19,8 @@ public class ModelMapperFactory {
         modelMapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
         modelMapper.addConverter(GRPC_BOOL_WRAPPER_TO_BOOLEAN);
         modelMapper.addConverter(BOOLEAN_TO_GRPC_WRAPPER_BOOL);
+        modelMapper.addConverter(BOOLEAN_TO_GRPC_WRAPPER_BOOL_BUILDER);
+        modelMapper.addConverter(GRPC_WRAPPER_BOOL_BUILDER_TO_BOLEAN);
         return modelMapper;
     }
 
@@ -42,4 +44,23 @@ public class ModelMapperFactory {
         }
     };
 
+    private static final Converter BOOLEAN_TO_GRPC_WRAPPER_BOOL_BUILDER = new Converter<Boolean, BoolValue.Builder>() {
+        @Override
+        public BoolValue.Builder convert(MappingContext<Boolean, BoolValue.Builder> context) {
+            System.out.println("Converter BOOLEAN_TO_GRPC_WRAPPER_BOOL_BUILDER executed ");
+            return Optional.ofNullable(context.getSource())
+                    .map(v -> BoolValue.newBuilder().setValue(v))
+                    .orElse(null);
+        }
+    };
+
+    private static final Converter GRPC_WRAPPER_BOOL_BUILDER_TO_BOLEAN = new Converter<BoolValue.Builder, Boolean>() {
+        @Override
+        public Boolean convert(MappingContext<BoolValue.Builder, Boolean> context) {
+            System.out.println("Converter GRPC_BOOL_WRAPPER_TO_BOOLEAN executed ");
+            return Optional.ofNullable(context.getSource())
+                    .map(BoolValue.Builder::getValue)
+                    .orElse(null);
+        }
+    };
 }

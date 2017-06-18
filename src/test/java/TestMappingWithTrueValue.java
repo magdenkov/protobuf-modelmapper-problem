@@ -21,6 +21,16 @@ public class TestMappingWithTrueValue {
     }
 
     @Test
+    public void convertProtoBufGeneratedWithTrueToDto() {
+        ModelMapper modelMapper = ModelMapperFactory.getConfiguredModelMapper();
+        ProtoCommon.TestBoolValue testBoolValue = ProtoCommon.TestBoolValue.newBuilder().setSomeBoolValue(BoolValue.newBuilder().setValue(true).build()).build();
+
+        BooleanDto booleanDto = modelMapper.map(testBoolValue, BooleanDto.class);
+
+        assertTrue(booleanDto.getSomeBoolValue());
+    }
+
+    @Test
     public void convertDtoWithTrueToProtoBufGenerated() {
         ModelMapper modelMapper = ModelMapperFactory.getConfiguredModelMapper();
         BooleanDto booleanDto = new BooleanDto();
@@ -29,15 +39,5 @@ public class TestMappingWithTrueValue {
         ProtoCommon.TestBoolValue testBoolValue = modelMapper.map(booleanDto, ProtoCommon.TestBoolValue.Builder.class).build();
 
         assertTrue(testBoolValue.getSomeBoolValue().getValue());
-    }
-
-    @Test
-    public void convertProtoBufGeneratedWithTrueToDto() {
-        ModelMapper modelMapper = ModelMapperFactory.getConfiguredModelMapper();
-        ProtoCommon.TestBoolValue testBoolValue = ProtoCommon.TestBoolValue.newBuilder().setSomeBoolValue(BoolValue.newBuilder().setValue(true).build()).build();
-
-        BooleanDto booleanDto = modelMapper.map(testBoolValue, BooleanDto.class);
-
-        assertTrue(booleanDto.getSomeBoolValue());
     }
 }
